@@ -1,0 +1,28 @@
+<button ejs-button (click)="addNode()">Add Node</button>
+<button ejs-button (click)="editNode()">Edit Node</button>
+<ejs-diagram #diagram
+id="diagram"
+width="1000"
+height="580px">
+<ng-template #nodeTemplate let-data >
+  <ng-container *ngIf="data.id == 'node1'">
+      <input type = "button" value="Node"  >
+  </ng-container>
+  </ng-template>
+<e-nodes>
+  <e-node
+    id="node1"
+    [offsetX]="250"
+    [offsetY]="250"
+    [style]="nodeStyle"
+    [height]="150"
+    [width]="150"
+    [shape]="shape"
+  >
+    <!-- <e-node-annotations>
+      <e-node-annotation content="Annotation"></e-node-annotation>
+    </e-node-annotations> -->
+  </e-node>
+ 
+</e-nodes>
+</ejs-diagram>
