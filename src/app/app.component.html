@@ -1,28 +1,22 @@
-<button ejs-button (click)="addNode()">Add Node</button>
-<button ejs-button (click)="editNode()">Edit Node</button>
-<ejs-diagram #diagram
-id="diagram"
-width="1000"
-height="580px">
-<ng-template #nodeTemplate let-data >
-  <ng-container *ngIf="data.id == 'node1'">
-      <input type = "button" value="Node"  >
-  </ng-container>
-  </ng-template>
-<e-nodes>
-  <e-node
-    id="node1"
-    [offsetX]="250"
-    [offsetY]="250"
-    [style]="nodeStyle"
-    [height]="150"
-    [width]="150"
-    [shape]="shape"
-  >
-    <!-- <e-node-annotations>
-      <e-node-annotation content="Annotation"></e-node-annotation>
-    </e-node-annotations> -->
-  </e-node>
- 
-</e-nodes>
-</ejs-diagram>
+<ejs-bulletchart [dataSource]="sprintData"
+                 valueField="completedStories"
+                 targetField="requiredStories"
+                 categoryField="name"
+                 title="Sprint Planning"
+                 subtitle="Estimated in story points"
+                 [minorTickLines]="minorTick"
+                 [majorTickLines]="majorTick"
+                 [legendSettings]="legendOptions"
+                 [tooltip]="tooltipSettings"
+                 orientation="Vertical"
+                 [minimum]="5"
+                 [maximum]="45"
+                 [interval]="5"
+                 width="80%"
+                 height="400">
+    <e-bullet-range-collection>
+      <e-bullet-range end="25" color="#DBE7F3"></e-bullet-range>
+      <e-bullet-range end='37' color="#BBCEE7"></e-bullet-range>
+      <e-bullet-range end='45' color="#96B2D7"></e-bullet-range>
+    </e-bullet-range-collection>
+</ejs-bulletchart>

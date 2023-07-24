@@ -2,10 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { DiagramModule, SymbolPaletteModule, OverviewModule } from '@syncfusion/ej2-angular-diagrams';
-
-
-import { ButtonModule } from '@syncfusion/ej2-angular-buttons';
+import {  BulletChartModule, BulletChartLegendService, BulletTooltipService } from '@syncfusion/ej2-angular-charts';
 
 @NgModule({
   declarations: [
@@ -13,9 +10,9 @@ import { ButtonModule } from '@syncfusion/ej2-angular-buttons';
   ],
   imports: [
     BrowserModule,
-    DiagramModule, SymbolPaletteModule, OverviewModule, ButtonModule
+    BulletChartModule
   ],
-  providers: [],
+  providers: [BulletChartLegendService, BulletTooltipService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

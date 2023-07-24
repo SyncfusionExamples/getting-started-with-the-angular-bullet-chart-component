@@ -1,4 +1,4 @@
-# Getting Started with the Angular Bullet Charts 
+# Getting Started with the Angular Bullet Chart
 
 A quick-start project to create a new Angular application using the Angular CLI toolchain. This project contains simple code customization, as well as some important features, like setting an actual and target value, axis values, and adding a tooltip, legend and change the orientation.
 
