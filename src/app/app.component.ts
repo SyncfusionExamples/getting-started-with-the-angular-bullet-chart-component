@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
+import { BulletChartModule } from '@syncfusion/ej2-angular-charts';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
+  imports: [BulletChartModule],   // ✅ IMPORTANT
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
