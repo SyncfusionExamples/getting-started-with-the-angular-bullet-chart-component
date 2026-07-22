@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
+import {  BulletChartModule, BulletChartLegendService, BulletTooltipService } from '@syncfusion/ej2-angular-charts';
 
 @Component({
   selector: 'app-root',
+  imports: [BulletChartModule],
+  providers: [BulletChartLegendService, BulletTooltipService],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
